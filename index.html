@@ -2,24 +2,274 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Ishtinarah Quazi</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        const roles = [
+            ["Role 1", "Organization 1", "Berkeley, CA", "Sept 2024", "created websiteeee solved blah"],
+            ["Role 2", "Organization 2", "New York, NY", "Jan 2025", "created websiteeee solved blah"],
+            ["Role 3", "Organization 3", "Remote", "May 2023", "created websiteeee solved blah"]
+        ];
+
+        function renderRoles(roles) {
+            const container = document.querySelector(".experience-wrapper");
+
+            roles.forEach(role => {
+                const roleWrapper = document.createElement("div");
+                roleWrapper.classList.add("role-wrapper");
+
+                const roleToggle = document.createElement("div");
+                roleToggle.classList.add("role-toggle");
+                roleToggle.innerHTML = `<p>toggle_shape</p><p>${role[0]}, <em>${role[1]}</em></p>`;
+
+                const roleTags = document.createElement("div");
+                roleTags.classList.add("role-tags");
+                roleTags.innerHTML = `
+                    <div class="location"><p>${role[2]}</p></div>
+                    <div class="start-end-date"><p>${role[3]}</p></div>
+                `;
+
+                const roleDescription = document.createElement("div");
+                roleDescription.classList.add("role-description")
+                roleDescription.style.display = "none"; 
+                roleDescription.innerHTML = ` <p>${role[4]}</p>`;
+
+                roleToggle.addEventListener("click", () => {
+                    roleDescription.style.display = roleDescription.style.display === "none" ? "block" : "none";
+                });
+
+                roleWrapper.appendChild(roleToggle);
+                roleWrapper.appendChild(roleTags);
+                roleWrapper.appendChild(roleDescription)
+                container.appendChild(roleWrapper);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => renderRoles(roles));
+
+    </script>
 </head>
 <body>
-    <div class="header">
-        <div class="header-image">
-            <img src={totoroImage} alt="Totoro" />
-        </div>
-        <div className="about-quote">
-            <div className="about-quote-icon">💐</div>
-            <span className="about-quote-text"><em>you are too concerned with what was and what will be. there is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. that is why it is called the present.</em></span>
-        </div>
-        <div class="header-title">
-            <h1>narah_test_port</h1>
-        </div>
-    
+    <div class="page-wrapper">
+        <div class="header-image"></div>
+        <div class="content-wrapper">
+            <div class="page-title">
+                <h1>welcome to my page</h1>
+            </div>
+            <div class="callout-quote-wrapper">
+                <div class="callout-quote">
+                    <h2>💐<em>you are too concerned with what was and what will be. there is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. that is why it is called the present.</em></h2>
+                </div>
+            </div>
+            <div class="about-wrapper">
+                <div class="about-section">
+                    <div class="about-section-image">
+                        <!-- <img> -->
+                    </div>
+                    <div class="about-section-bio">
+                        <h2>about me!</h2>>
+                        <p class="about-section-text">hi!</p>
+                    </div>
+                    <div class="about-section-links">
+                        <div class="links-header">
+                            <h2>❀ Contact</h2>>
+                        </div>
+                        <div class="links-wrapper">
+                            <div class="links-list">
+                                <a>Github</a>
+                                <a>LinkedIn</a>
+                                <a>Resume</a>
+                                <a>Website Template</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-border"></div>
+            <div class="info-wrapper">
+                <div class="info-section">
+                    <div class="projects-section">
+                        <h1>✦ projects!</h1>
+                        <div class="project-wrapper">
+                            <div class="project-one">
+                                <div class="project-one-info">
+                                    <div class="project-one-title">
+                                        <h2>project1</h2>
+                                    </div>
+                                    <div class="project-one-desc">
+                                        <p>project desc!!</p>
+                                    </div>
+                                    <div class="project-one-tags">
+                                        <div class="proj-tag">
+                                            <p>HTML/CSS</p>
+                                        </div>
+                                        <div class="proj-tag">
+                                            <p>Python</p>
+                                        </div>
+                                        <div class="proj-tag">
+                                            <p>APIs!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="star-icon-wrapper">
+                                    <p class="star-icon">★ temp star</p>
+                                </div>
+                            </div>
+                            <div class="project-two">
+                                <div class="project-two-info">
+                                    <div class="project-two-title">
+                                        <h2>project2</h2>
+                                    </div>
+                                    <div class="project-two-desc">
+                                        <p>project2 desc!!</p>
+                                    </div>
+                                    <div class="project-two-tags">
+                                        <div class="proj-tag">
+                                            <p>HTML/CSS</p>
+                                        </div>
+                                        <div class="proj-tag">
+                                            <p>Python</p>
+                                        </div>
+                                        <div class="proj-tag">
+                                            <p>APIs!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="star-icon-wrapper">
+                                    <p class="star-icon">★ temp star</p>
+                                </div>
+                            </div>
+                            <div class="project-three">
+                                <div class="project-three-info">
+                                    <div class="project-three-title">
+                                        <h2>project3</h2>
+                                    </div>
+                                    <div class="project-three-desc">
+                                        <p>project3 desc!!</p>
+                                    </div>
+                                    <div class="project-three-tags">
+                                        <div class="proj-tag">
+                                            <p>HTML/CSS</p>
+                                        </div>
+                                        <div class="proj-tag">
+                                            <p>Python</p>
+                                        </div>
+                                        <div class="proj-tag">
+                                            <p>APIs!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="star-icon-wrapper">
+                                    <p class="star-icon">★ temp star</p>
+                                </div>
+                            </div>
+                            <div class="project-four">
+                                <div class="project-four-info">
+                                    <div class="project-four-title">
+                                        <h2>project4</h2>
+                                    </div>
+                                    <div class="project-four-desc">
+                                        <p>project4 desc!!</p>
+                                    </div>
+                                    <div class="project-four-tags">
+                                        <div class="html-tag">
+                                            <p>HTML/CSS</p>
+                                        </div>
+                                        <div class="python-tag">
+                                            <p>Python</p>
+                                        </div>
+                                        <div class="api-tag">
+                                            <p>APIs!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="star-icon-wrapper">
+                                    <p class="star-icon">★ temp star</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="experiences-section">
+                        <h1>✦ work experience!</h1>
+                        <div class="experience-wrapper"></div>
+                    </div>
+                </div>
+                <div class="education-wrapper">
+                    <div class="education-title">
+                        <h1>✦ work experience!</h1>
+                        <div class="education-list">
+                            <div class="education-cal">
+                                <strong>UC Berkeley</strong>
+                                <p>BA in blahblah</p>
+                                <p style="color:grey">2022-2026</p>
+                                <div class="cal-toggle">
+                                    <p>tempshape ✦ </p>
+                                    <p>toggle title...</p>
+                                </div>
+                                <div class="cal-course-list">
+                                    <li>dfasd</li>
+                                    <li>fsdasdfas</li>
+                                </div>
+                                
 
+                            </div>
+                            <div class="education-otis">
+                                <strong>OCAD</strong>
+                                <p>BA in blahblah</p>
+                                <p style="color:grey">2021-2022</p>
+                                <div class="cal-toggle">
+                                    <p>mwahaha ✦ </p>
+                                    <p>toggle title...</p>
+                                </div>
+                                <div class="otis-course-list">
+                                    <li>dfasd</li>
+                                    <li>fsdasdfas</li>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-border"></div>
+            <div class="byebye">
+                <div class="have-normal-day">
+                    <div class="have-normal-heading">
+                        <h2>Have a Normal Day!</h2>
+                    </div>
+                    <div class="have-normal-image">
+                        <img>
+                    </div>
+                </div>
+                <div class="send-message-wrapper">
+                    <div class="send-message-section">
+                        <h2>❀ Send a Message!</h2>
+                        <div class="enter-info">
+                            <div class="name_email_row">
+                                <div class="name-block">
+                                    <p>tempText</p>
+                                </div>
+                                <div class="email-block">
+                                    <p>tempEmail</p>
+                                </div>
+                            </div>
+                            <div class="message-block">
+                                <p>enter message here</p>
+                            </div>
+                        </div>
+                        <div class="submit-button">
+                            <button>submit:)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-border"></div>
+        </div>
+        <div class="footer-image"></div>
     </div>
 </body>
 </html>
