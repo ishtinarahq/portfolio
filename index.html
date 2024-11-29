@@ -9,23 +9,31 @@
 
     <script>
         const roles = [
-            ["Role 1", "Organization 1", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
+            ["Internal Member (Tech Team)", "Cognitive Science Students Association (CSSA) at UC Berkeley", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
-            ["Role 2", "Organization 2", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
+            ["CS 70 Junior Mentor (JM)", "Computer Science Mentors", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
-            ["Role 3", "Organization 3", "Remote", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
+            ["Design Lead", "Medical Technology at Berkeley", "Berkeley, CA", "Sept 2024 - Present", ["❀ Leading the development and design of continuous scientific journal issues, highlighting physician interactions, comprehensive medical literature reviews, and tech-related blog posts",
+            "❀ Finalizing style and writing guidelines to ensure the quality and consistency of scientific journal publications", "❀ Completed Design and Branding guidelines, including designing a new logo"]],
+            ["Undergraduate Research Assistant", "University of California, Berkeley", "Remote", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]]
         ];
 
-        const projects = [{title: "project1", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["1HTML/CSS", "Python", "APIs!"]}, {title: "project2", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["2HTML/CSS", "Python", "APIs!"]}, {title: "project3", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["3HTML/CSS", "Python", "APIs!"]}, {title: "project3", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["3HTML/CSS", "Python", "APIs!"]}]
+        const projects = [{title: "project1", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["1HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication"]},  
+        
+        {title: "project2", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["2HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication"]},
+        
+        {title: "project3", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["3HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication"]},
+        
+        {title: "project3", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["3HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication", "Real-time updates", "Real-time updates", "Real-time updates", "Real-time updates", "dfasfasdfasd"]}]
 
         //project-wrapper
         function renderProjects() {
             const container = document.querySelector(".project-wrapper")
             
-            projects.forEach(project => {
+            projects.forEach((project, index) => {
                 container.innerHTML += `
-                <div class="project">
+                <div class="project" data-index="${index}">
                     <div class="project-info">
                         <div class="project-title">
                             <h2>${project.title}</h2>
@@ -49,13 +57,52 @@
                         </div>
                     </div>
                     <div class="star-icon-wrapper">
-                        <img src="images/star-icon-removebg-preview.png"
+                        <img src="images/star-icon-removebg-preview.png" alt="Star Icon">
                     </div>
                 </div>
             </div>    
             `;
         });
+            document.querySelectorAll(".project").forEach(projectCard => {
+                projectCard.addEventListener("click", (e) => {
+                    const index = projectCard.dataset.index;
+                    openPopup(projects[index]);
+            });
+        });
         }
+
+        function openPopup(projectData){
+            const overlay = document.getElementById("popup-overlay");
+            const popupBody = overlay.querySelector(".popup-body");
+            
+            popupBody.innerHTML = `
+            <h2>${projectData.title}</h2>
+            <p>${projectData.description}</p>
+            <a href="google.com" style="font-style: italic">Link to Project</a>
+            <div class="popup-tags">
+                ${projectData.tags.map(tag => {
+                            
+                            let tagClass = '';
+                            if (tag.includes('HTML/CSS')) {
+                                tagClass = 'html-css';
+                            } else if (tag.includes('Python')) {
+                                tagClass = 'python';
+                            } else if (tag.includes('API')) {
+                                tagClass = 'api';
+                            }
+            
+                                return `<div class="proj-tag ${tagClass}"><p>${tag}</p></div>`}).join('')}
+            </div>
+            <ul class="popup-points">
+            ${projectData.points.map(point => `<li>${point}</li>`).join("")}
+            </ul>
+        `;
+        overlay.classList.remove("hidden");
+        }
+        function closePopup() {
+        const overlay = document.getElementById("popup-overlay");
+        overlay.classList.add("hidden");
+}
         function renderRoles(roles) {
             const container = document.querySelector(".experience-wrapper");
 
@@ -130,6 +177,8 @@
             renderProjects();
             renderRoles(roles);
             educationToggle();
+            const closeBtn = document.querySelector(".close-popup");
+            closeBtn.addEventListener("click", closePopup);
         });
 
     </script>
@@ -175,6 +224,12 @@
                         <div class="project-wrapper">
                             
                             
+                        </div>
+                        <div id="popup-overlay" class="popup-overlay hidden">
+                            <div class="popup-content">
+                                <button class="close-popup">&times;</button>
+                                <div class="popup-body"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="experiences-section">
@@ -231,27 +286,28 @@
                         <img src="images/normal_day.png">
                     </div>
                 </div>
-                <div class="send-message-wrapper">
+                <!-- <div class="send-message-wrapper">
                     <div class="send-message-section">
                         <h2>❀ Send a Message!</h2>
                         <div class="enter-info">
                             <div class="name_email_row">
                                 <div class="name-block">
-                                    <p>❀ Enter Name Here</p>
+                                    
+                                <input type="text" id="name" name="name" placeholder="❀ Enter Name Here" required>
                                 </div>
                                 <div class="email-block">
-                                    <p>❀ Enter Email Here</p>
+                                    <input type="email" id="email" name="email" placeholder="❀ Enter Email Here" required>
                                 </div>
                             </div>
                             <div class="message-block">
-                                <p>❀ Enter Message Here</p>
+                                <textarea id="message" name="message" placeholder="❀ Enter Message Here" required></textarea>
                             </div>
                         </div>
                         <div class="submit-button">
                             <button><em>✦  Submit</em></button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="page-border">
                 <p>❀ ❀ ❀ ❀ ❀ ❀</p>
