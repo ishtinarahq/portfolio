@@ -22,10 +22,6 @@
         //project-wrapper
         function renderProjects() {
             const container = document.querySelector(".project-wrapper")
-            if (!container) {
-            console.error("Project container not found!");
-            return;
-            }
             
             projects.forEach(project => {
                 container.innerHTML += `
@@ -229,7 +225,7 @@
             <div class="byebye">
                 <div class="have-normal-day">
                     <div class="have-normal-heading">
-                        <h2>❀ Have a Normal Day!</h2>
+                        <h2>✦  Have a Normal Day!</h2>
                     </div>
                     <div class="have-normal-image">
                         <img src="images/normal_day.png">
@@ -241,18 +237,18 @@
                         <div class="enter-info">
                             <div class="name_email_row">
                                 <div class="name-block">
-                                    <p>tempText</p>
+                                    <p>❀ Enter Name Here</p>
                                 </div>
                                 <div class="email-block">
-                                    <p>tempEmail</p>
+                                    <p>❀ Enter Email Here</p>
                                 </div>
                             </div>
                             <div class="message-block">
-                                <p>enter message here</p>
+                                <p>❀ Enter Message Here</p>
                             </div>
                         </div>
                         <div class="submit-button">
-                            <button>submit:)</button>
+                            <button><em>✦  Submit</em></button>
                         </div>
                     </div>
                 </div>

@@ -102,7 +102,7 @@ a {
     flex-direction: column;
     width: 25%;
     height: fit-content;
-    border: var(--border-color);
+    outline: var(--border-color);
     border-radius: 6px;
 }
 
@@ -175,32 +175,42 @@ a {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 40vw;
+    width: 35vw;
     flex-shrink: 1;
+}
+
+@media screen and (max-width: 630px) {
+    .info-wrapper {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 770px) {
     .experiences-section {
-        max-width: 40vw;
+        max-width: 35vw;        
     }
     .experience-wrapper {
-        max-width: 40vw;
+        max-width: 35vw;
+    }
+    .info-wrapper {
+        flex-direction: row;
     }
 }
 
 @media screen and (min-width: 770px) {
     .projects-section, .experiences-section, .experience-wrapper {
-        width: 50vw;
+        width: 45vw;
     }
 }
 
 @media screen and (min-width: 1000px) {
     .projects-section, .experiences-section, .experience-wrapper {
         width: 55vw;
+        
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
     .projects-section, .experiences-section, .experience-wrapper {
         width: 60vw;
     }
@@ -210,7 +220,7 @@ a {
     .projects-section, .experiences-section, .experience-wrapper {
         width: 63vw;
     }
-}
+} 
 
 .project-wrapper {
     /* display: grid;
@@ -250,7 +260,8 @@ a {
 }
 
 .project-desc {
-    width: 16vw;
+    width: 20vw;
+    min-width: none;
     height: fit-content;
 }
 
@@ -308,7 +319,8 @@ a {
 .education-wrapper {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
+    height: fit-content;
     max-width: 20vw;
     padding: 0px 10px;
     background-color: var(--color-light-blue);
@@ -335,6 +347,7 @@ a {
 
 .role-description {
     list-style: none;
+    width: 100%;
 }
 
 .education-list li {
@@ -415,7 +428,7 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 50vw;
+    max-width: 40vw;
     height: max-content;
     
 }
@@ -426,3 +439,139 @@ a {
     gap: 0px;
 }
 
+.byebye {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.have-normal-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50vw;
+    outline: var(--border-color);
+    border-radius: 8px;
+    
+}
+
+.have-normal-heading {
+    width: 100%;
+    background-color: var(--color-light-blue);
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.have-normal-heading h2 {
+    padding: 0px 24px;
+}
+
+.have-normal-image {
+    border-radius: 0 0 8px 8px;
+    background-color: var(--color-light-fuchsia);
+    width: 100%;
+    height: max-content;
+    padding: 24px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.have-normal-image img {
+    width: 80%;
+}
+
+.send-message-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 50px 24px 24px;
+    width: 100%;
+    background-color: var(--color-light-blue);
+}
+
+.send-message-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.send-message-section h2{
+    height: fit-content;
+    line-height: 1;
+}
+
+.enter-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-right: 24px;
+    font-size: 10.5px;
+}
+
+.name_email_row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    max-width: 86%;
+}
+
+.name-block, .email-block {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    min-width: fit-content;
+    max-height: 2vw;
+    /* height: fit-content; */
+    line-height: 0.2;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    outline: var(--border-color);
+    align-items: center;
+}
+/* 
+.name-block {
+    width: 50%;
+}
+
+.email-block {
+    width: 50%;
+    
+} */
+
+
+.message-block {
+    width: 100%;
+    /* max-width: 86%; */
+    min-height: 4vw;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    outline: var(--border-color);
+    padding: 10px;
+}
+
+.submit-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.submit-button button {
+    padding: 10px 8px;
+    line-height: 0.3;
+    background-color: var(--color-fuchsia);
+    color: white;
+    border: var(--border-color);
+    border-radius: 8px;
+    font-weight: bolder;
+    cursor: pointer;
+}
