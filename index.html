@@ -9,11 +9,11 @@
 
     <script>
         const roles = [
-            ["Role 1", "Organization 1", "Berkeley, CA", "September 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
+            ["Role 1", "Organization 1", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
-            ["Role 2", "Organization 2", "Berkeley, CA", "September 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
+            ["Role 2", "Organization 2", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
-            ["Role 3", "Organization 3", "Remote", "September 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
+            ["Role 3", "Organization 3", "Remote", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]]
         ];
 
@@ -112,9 +112,28 @@
             });
         }
 
+        function educationToggle() {
+            const calToggle = document.querySelector(".cal-toggle");
+            const otisToggle = document.querySelector(".otis-toggle");
+
+            const calCourseList = document.querySelector(".cal-course-list");
+            const otisCourseList = document.querySelector(".otis-course-list");
+
+            calToggle.addEventListener("click", () => {
+            calCourseList.style.display = calCourseList.style.display === "none" ? "block" : "none";
+            calToggle.classList.toggle("active");
+            });
+            otisToggle.addEventListener("click", () => {
+            otisCourseList.style.display = otisCourseList.style.display === "none" ? "block" : "none";
+            otisToggle.classList.toggle("active");
+            });
+    
+        }
+
         document.addEventListener("DOMContentLoaded", () =>{
             renderProjects();
             renderRoles(roles);
+            educationToggle();
         });
 
     </script>
@@ -169,33 +188,33 @@
                 </div>
                 <div class="education-wrapper">
                     <div class="education-section">
-                        <h1>✦ education!</h1>
+                        <h1 style="color: #BE365F">✦ education!</h1>
                         <div class="education-list">
                             <div class="education-cal">
-                                <strong>UC Berkeley</strong>
-                                <p>BA in blahblah</p>
+                                <strong>University of California, Berkeley</strong>
+                                <p>BA in Computer Science; BA in Cognitive Science | Minor in Linguistics</p>
                                 <p style="color:grey">2022-2026</p>
                                 <div class="cal-toggle">
-                                    <p>tempshape ✦ </p>
-                                    <p>toggle title...</p>
+                                    <div class="cal-toggle-triangle"></div>
+                                    <p style="color: #BE365F; font-weight: 600">Relevant Coursework</p>
                                 </div>
-                                <div class="cal-course-list">
-                                    <li>dfasd</li>
+                                <div class="cal-course-list" style="display: none;">
+                                    <li>CS 61A: The Structure and Interpretation of Computer Programs</li>
                                     <li>fsdasdfas</li>
                                 </div>
                                 
 
                             </div>
                             <div class="education-otis">
-                                <strong>OCAD</strong>
-                                <p>BA in blahblah</p>
+                                <strong>Otis College of Art and Design</strong>
+                                <p>Ryman Arts Selected Applicant</p>
                                 <p style="color:grey">2021-2022</p>
-                                <div class="cal-toggle">
-                                    <p>mwahaha ✦ </p>
-                                    <p>toggle title...</p>
+                                <div class="otis-toggle">
+                                    <div class="otis-toggle-triangle"></div>
+                                    <p style="color: #BE365F; font-weight: 600">Relevant Coursework</p>
                                 </div>
-                                <div class="otis-course-list">
-                                    <li>dfasd</li>
+                                <div class="otis-course-list" style="display: none;">
+                                    <li>CS 61A: The Structure and Interpretation of Computer Programs</li>
                                     <li>fsdasdfas</li>
                                 </div>
 
