@@ -13,19 +13,21 @@
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
             ["CS 70 Junior Mentor (JM)", "Computer Science Mentors", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
-            ["Design Lead", "Medical Technology at Berkeley", "Berkeley, CA", "Sept 2024 - Present", ["❀ Leading the development and design of continuous scientific journal issues, highlighting physician interactions, comprehensive medical literature reviews, and tech-related blog posts",
+            ["Design Lead", "Medical Technology at Berkeley", "Berkeley, CA", "July 2023 - Present", ["❀ Leading the development and design of continuous scientific journal issues, highlighting physician interactions, comprehensive medical literature reviews, and tech-related blog posts",
             "❀ Finalizing style and writing guidelines to ensure the quality and consistency of scientific journal publications", "❀ Completed Design and Branding guidelines, including designing a new logo"]],
-            ["Undergraduate Research Assistant", "University of California, Berkeley", "Remote", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
-            "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]]
+            ["Undergraduate Research Assistant", "University of California, Berkeley", "Remote", "Sept 2024 - Present", ["❀ Assisted professor David I. Levine on researching effective methods for health education",
+            "❀ Developed and optimized new features for a game creator website using Python (Flask), JavaScript, and SQL (SQLite for game database), including revising and enhancing existing code and maintaining version control with Github"]]
         ];
 
-        const projects = [{title: "project1", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["1HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication"]},  
+        const projects = [
+        {title: "Music Cognition + SpotifyAPI (in progress)", description: "a web app that combines music recommendations and mood tracking to help users process emotions. by analyzing song features and user moods, the app creates personalized playlists that transition from sad to uplifting music.", tags: ["HTML/CSS", "Python", "React", "API", "TensorFlow (LSTM)", "Sentiment Analysis"], points: ["inspired by studies on cognitive neuroscience and emotional responses to music"]},
+
+        {title: "musically noted", description: "a web app that allows users to create private annotations for song lyrics", tags: ["Java", "API", "Web Development"], points: ["(stay tuned!)"]},
+
+        {title: "Mind-Reading LED", description: "Personal Project/Hands-On PCB Engineering (DeCal)", tags: ["Python", "Circuit Design"], points: ["Redesigning PCB schematics and building a PCB board for both EEG and ECG scans, integrating a microcontroller and digital display for enhanced functionality", "Exploring multimodal emotion recognition by analyzing heart rate and brain scans"]},  
         
-        {title: "project2", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["2HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication"]},
-        
-        {title: "project3", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["3HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication"]},
-        
-        {title: "project3", description: "a web app for private lyric annotations that uses the spotifyAPI and geniusAPI desc!!", tags: ["3HTML/CSS", "Python", "APIs!"], points: ["Real-time updates", "Seamless user authentication", "Real-time updates", "Real-time updates", "Real-time updates", "Real-time updates", "dfasfasdfasd"]}]
+        {title: "NGordnet (Wordnet)", description: "a program that uses NGram and WordNet dataset to explore word usage history and hyponyms", tags: ["Java", "Data Structures"], points: ["Developed a Java program using NGram and WordNet dataset to explore word usage history and hyponyms", "Implemented features for calculating historical frequency, generating graphs, and generating k number of hyponyms for a provided word or list of words based on popularity, processing within 60 seconds."]}
+        ]
 
         //project-wrapper
         function renderProjects() {
@@ -78,7 +80,6 @@
             popupBody.innerHTML = `
             <h2>${projectData.title}</h2>
             <p>${projectData.description}</p>
-            <a href="google.com" style="font-style: italic">Link to Project</a>
             <div class="popup-tags">
                 ${projectData.tags.map(tag => {
                             
@@ -199,18 +200,17 @@
                     </div>
                     <div class="about-section-bio">
                         <h2>❀ About me!</h2>
-                        <p class="about-section-text">Crafted for developers and designers, this template allows you to beautifully present your skills, educational background, certifications, and standout projects. With easy customization and a professional layout, it’s designed to help you make a memorable impression on prospective employers.
-                            !</p>
+                        <p class="about-section-text">Hello! I'm a junior studying computer science and cognitive science, with a minor in linguistics. I'm passionate about exploring the intersection of psychology, technology, and creativity. I have experience in front end development, research, and design. Scroll down to learn more!</p>
                     </div>
                     <div class="about-section-links">
                         <div class="links-header">
                             <h2>❀ Contact</h2>
                         </div>
                         <div class="links-list">
-                                <a href="https://github.com/SimplifyJobs/Summer2024-Internships">Github</a>
+                                <a href="mailto:ishtinarah@berkeley.edu">Email</a>
                                 <a href="https://www.linkedin.com/in/ishtinarahquazi/">LinkedIn</a>
                                 <a href="#">Resume</a>
-                                <a href="#">Website Template</a>
+                                <a href="#">Portfolio Website Template</a>
                         </div>
                     </div>
             </div>
@@ -265,8 +265,8 @@
                                     <p style="color: #BE365F; font-weight: 600">Relevant Coursework</p>
                                 </div>
                                 <div class="otis-course-list" style="display: none;">
-                                    <li>CS 61A: The Structure and Interpretation of Computer Programs</li>
-                                    <li>fsdasdfas</li>
+                                    <li>CS 61A (Python)</li>
+                                    <li>CS 61B (Java)</li>
                                 </div>
 
                             </div>
@@ -286,7 +286,7 @@
                         <img src="images/normal_day.png">
                     </div>
                 </div>
-                <!-- <div class="send-message-wrapper">
+                <div class="send-message-wrapper">
                     <div class="send-message-section">
                         <h2>❀ Send a Message!</h2>
                         <div class="enter-info">
@@ -307,7 +307,7 @@
                             <button><em>✦  Submit</em></button>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
             <div class="page-border">
                 <p>❀ ❀ ❀ ❀ ❀ ❀</p>
