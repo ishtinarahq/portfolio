@@ -101,13 +101,25 @@
             <ul class="popup-points">
             ${projectData.points.map(point => `<li>${point}</li>`).join("")}
             </ul>
-        `;
-        overlay.classList.remove("hidden");
+            `;
+            overlay.classList.remove("hidden");
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    closePopup();
+                }
+            });
         }
+        
         function closePopup() {
-        const overlay = document.getElementById("popup-overlay");
-        overlay.classList.add("hidden");
-}
+            const overlay = document.getElementById("popup-overlay");
+            overlay.classList.add("hidden");
+            const popupBody = overlay.querySelector(".popup-body");
+            overlay.removeEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    closePopup();
+                }   
+            });
+        }
         function renderRoles(roles) {
             const container = document.querySelector(".experience-wrapper");
 
