@@ -5,28 +5,32 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishtinarah Quazi</title>
+    <link rel="icon" href="images/download.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-
+    <script src="script.js"></script>
     <script>
         const roles = [
             ["Internal Member (Tech Team)", "Cognitive Science Students Association (CSSA) at UC Berkeley", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
             ["CS 70 Junior Mentor (JM)", "Computer Science Mentors", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
             "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
+            ["UI Designer", "ASUC Office of the CTO", "Berkeley, CA", "Sept 2024 - Present", ["❀ Designed websites using Figma to create user-friendly, visually appealing interfaces",
+            "❀ Collaborating with groups on website branding and design direction"]],
             ["Design Lead", "Medical Technology at Berkeley", "Berkeley, CA", "July 2023 - Present", ["❀ Leading the development and design of continuous scientific journal issues, highlighting physician interactions, comprehensive medical literature reviews, and tech-related blog posts",
             "❀ Finalizing style and writing guidelines to ensure the quality and consistency of scientific journal publications", "❀ Completed Design and Branding guidelines, including designing a new logo"]],
-            ["Undergraduate Research Assistant", "University of California, Berkeley", "Remote", "Sept 2024 - Present", ["❀ Assisted professor David I. Levine on researching effective methods for health education",
-            "❀ Developed and optimized new features for a game creator website using Python (Flask), JavaScript, and SQL (SQLite for game database), including revising and enhancing existing code and maintaining version control with Github"]]
-        ];
+            ["Undergraduate Research Assistant", "University of California, Berkeley", "Berkeley, CA", "Sept 2023 - June 2024", ["❀ Assisted professor David I. Levine on researching effective methods for health education",
+            "❀ Developed and optimized new features for a game creator website using Python (Flask), JavaScript, and SQL (SQLite for game database), including revising and enhancing existing code and maintaining version control with Github"]],
+            ["Academic Intern","UC Berkeley Electrical Engineering & Computer Sciences (EECS)",  "Berkeley, CA","Sept 2023 - Dec 2023", ["❀ Assisted the teaching assistant in weekly lab sections for CS 61A (The Structure and Interpretation of Computer Programs) by guiding around 30 students through Python, SQL, and Scheme coding assignments", "❀ Tutored students on foundational topics such as recursion, object-oriented programming, and data abstraction"]]]
+        ;
 
         const projects = [
-        {title: "Music Cognition + SpotifyAPI (in progress)", description: "a web app that combines music recommendations and mood tracking to help users process emotions. by analyzing song features and user moods, the app creates personalized playlists that transition from sad to uplifting music.", tags: ["HTML/CSS", "Python", "React", "API", "TensorFlow (LSTM)", "Sentiment Analysis"], points: ["inspired by studies on cognitive neuroscience and emotional responses to music"]},
+        {title: "Music Cognition + SpotifyAPI (in progress)", description: "a web app that combines music recommendations and mood tracking to help users process emotions", tags: ["HTML/CSS", "React", "Python",   "TensorFlow (LSTM)", "Sentiment Analysis", "API"], points: ["inspired by studies on cognitive neuroscience and emotional responses to music"]},
 
-        {title: "musically noted", description: "a web app that allows users to create private annotations for song lyrics", tags: ["Java", "API", "Web Development"], points: ["(stay tuned!)"]},
+        {title: "Musically Noted", description: "a web app that allows users to create private annotations for song lyrics", tags: ["Java", "API", "Full Stack Development"], points: ["(stay tuned!)"]},
 
-        {title: "Mind-Reading LED", description: "Personal Project/Hands-On PCB Engineering (DeCal)", tags: ["Python", "Circuit Design"], points: ["Redesigning PCB schematics and building a PCB board for both EEG and ECG scans, integrating a microcontroller and digital display for enhanced functionality", "Exploring multimodal emotion recognition by analyzing heart rate and brain scans"]},  
+        {title: "Mind-Reading LED", description: "Personal Project/Hands-On PCB Engineering (DeCal)", tags: ["Python", "Circuit Design"], points: ["Redesigned PCB schematics and built a PCB board for both EEG and ECG scans, integrating a microcontroller and digital display for enhanced functionality", "Explored multimodal emotion recognition by analyzing heart rate and brain scans"]},  
         
-        {title: "NGordnet (Wordnet)", description: "a program that uses NGram and WordNet dataset to explore word usage history and hyponyms", tags: ["Java", "Data Structures"], points: ["Developed a Java program using NGram and WordNet dataset to explore word usage history and hyponyms", "Implemented features for calculating historical frequency, generating graphs, and generating k number of hyponyms for a provided word or list of words based on popularity, processing within 60 seconds."]}
+        {title: "NGordnet (Wordnet)", description: "a program that uses NGram and WordNet dataset to explore word usage history and hyponyms", tags: ["Java"], points: ["Developed a Java program using NGram and WordNet dataset to explore word usage history and hyponyms", "Implemented features for calculating historical frequency, generating graphs, and generating k number of hyponyms for a provided word or list of words based on popularity, processing within 60 seconds."]}
         ]
 
         //project-wrapper
@@ -47,9 +51,9 @@
                             ${project.tags.map(tag => {
                             
                             let tagClass = '';
-                            if (tag.includes('HTML/CSS')) {
+                            if (tag.includes('HTML/CSS') || tag.includes('React') || tag.includes('Development')) {
                                 tagClass = 'html-css';
-                            } else if (tag.includes('Python')) {
+                            } else if (tag.includes('Python') || tag.includes('Java') || tag.includes('Flow')) {
                                 tagClass = 'python';
                             } else if (tag.includes('API')) {
                                 tagClass = 'api';
@@ -59,7 +63,7 @@
                         </div>
                     </div>
                     <div class="star-icon-wrapper">
-                        <img src="images/star-icon-removebg-preview.png" alt="Star Icon">
+                        <img src="images/image-removebg-preview (1).png" alt="Star Icon">
                     </div>
                 </div>
             </div>    
@@ -84,9 +88,9 @@
                 ${projectData.tags.map(tag => {
                             
                             let tagClass = '';
-                            if (tag.includes('HTML/CSS')) {
+                            if (tag.includes('HTML/CSS') || tag.includes('React') || tag.includes('Development')) {
                                 tagClass = 'html-css';
-                            } else if (tag.includes('Python')) {
+                            } else if (tag.includes('Python') || tag.includes('Java') || tag.includes('Flow')) {
                                 tagClass = 'python';
                             } else if (tag.includes('API')) {
                                 tagClass = 'api';
@@ -189,28 +193,26 @@
         <div class="header-image"></div>
         <div class="content-wrapper">
             <div class="page-title">
-                <h1>welcome to my page</h1>
+                <h1>welcome to ishtinarah's portfolio!</h1>
             </div>
                 <div class="callout-quote">
                     <h2>💐<em>    you are too concerned with what was and what will be. there is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. that is why it is called the present.</em></h2>
                 </div>
             <div class="about-section">
                     <div class="about-section-image">
-                        <img src="images/cat_test_image.png">
+                        <img src="images/image.png">
                     </div>
                     <div class="about-section-bio">
                         <h2>❀ About me!</h2>
-                        <p class="about-section-text">Hello! I'm a junior studying computer science and cognitive science, with a minor in linguistics. I'm passionate about exploring the intersection of psychology, technology, and creativity. I have experience in front end development, research, and design. Scroll down to learn more!</p>
+                        <p class="about-section-text">Hello! I'm a junior studying computer science and cognitive science, with a minor in linguistics. I'm passionate about exploring the intersection of psychology, technology, and creativity. I have experience in front end development, research, and design. Scroll down to <em>learn more!</em></p>
                     </div>
                     <div class="about-section-links">
                         <div class="links-header">
                             <h2>❀ Contact</h2>
                         </div>
                         <div class="links-list">
-                                <a href="mailto:ishtinarah@berkeley.edu">Email</a>
+                                <a href="mailto:ishtinarah@berkeley.edu">✉ Email</a>
                                 <a href="https://www.linkedin.com/in/ishtinarahquazi/">LinkedIn</a>
-                                <a href="#">Resume</a>
-                                <a href="#">Portfolio Website Template</a>
                         </div>
                     </div>
             </div>
@@ -251,7 +253,14 @@
                                 </div>
                                 <div class="cal-course-list" style="display: none;">
                                     <li>CS 61A: The Structure and Interpretation of Computer Programs</li>
-                                    <li>fsdasdfas</li>
+                                    <li>CS 61B: Data Structures and Algorithms</li>
+                                    <li>Data 8: Foundations of Data Science</li>
+                                    <li>CS 70: Discrete Math and Algorithms</li>
+                                    <li>COGSCI 115: Neuropsychology of Happiness</li>
+                                    <li>COGSCI 1B: Introduction to Cognitive Science</li>
+                                    <li>MATH 54: Linear Algebra & Differential Equations</li>
+                                    <li>DATA 100: Principles and Techniques of Data Science</li>
+                                    <li>MUSIC 108: Music Perception and Cognition</li>
                                 </div>
                                 
 
@@ -265,8 +274,8 @@
                                     <p style="color: #BE365F; font-weight: 600">Relevant Coursework</p>
                                 </div>
                                 <div class="otis-course-list" style="display: none;">
-                                    <li>CS 61A (Python)</li>
-                                    <li>CS 61B (Java)</li>
+                                    <li>Foundation Drawing</li>
+                                    <li> Intermediate Drawing and Painting</li>
                                 </div>
 
                             </div>
@@ -286,8 +295,9 @@
                         <img src="images/normal_day.png">
                     </div>
                 </div>
-                <div class="send-message-wrapper">
-                    <div class="send-message-section">
+                <!-- <div class="send-message-wrapper">
+                    
+                    <form action="/send-message" method="POST" class="send-message-section">
                         <h2>❀ Send a Message!</h2>
                         <div class="enter-info">
                             <div class="name_email_row">
@@ -306,14 +316,15 @@
                         <div class="submit-button">
                             <button><em>✦  Submit</em></button>
                         </div>
+                    </form>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="page-border">
+             <div class="page-border">
                 <p>❀ ❀ ❀ ❀ ❀ ❀</p>
             </div>
         </div>
-        <div class="footer-image"></div>
+       <div class="footer-image"></div>
     </div>
 </body>
 </html>
