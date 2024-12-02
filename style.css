@@ -309,7 +309,15 @@ a {
     overflow-y: auto; 
 }
 
-/* Close button */
+.popup-content::-webkit-scrollbar {
+    width: 7px;
+    height: 1px;
+}
+.popup-content::-webkit-scrollbar-thumb {
+    background: var(--color-blue);
+    border-radius: 4px;
+}
+
 .close-popup {
     position: absolute;
     top: 8px;
