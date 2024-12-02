@@ -192,7 +192,6 @@ a {
     .info-wrapper {
         flex-direction: column;
         flex-wrap: wrap;
-        background-color: #ba7b8e;
     }
     .education-section, .project {
         margin: 0;
