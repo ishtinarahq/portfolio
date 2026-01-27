@@ -10,24 +10,33 @@
     <script src="script.js"></script>
     <script>
         const roles = [
-            ["Undergraduate Research Assistant", "The Wilbrecht Lab", "Berkeley, CA", "Jan 2025 - Present", ["❀ Developing a computer vision pipeline using OpenCV to extract and convert 100+ experimental datasheets into structured CSV files, automating manual processes, and enabling scalable Pandas-based data analysis",
+            ["Software Engineering Intern", "Panafold", "San Francisco, CA", "June 2025 - Dec 2025", [
+                "❀ Enhanced user engagement by ~15% by architecting and shipping new user-facing features using Next.js, Tailwind CSS, and Material UI, integrating AWS Amplify to connect frontend interactions with backend services",
+                "❀ Spearheaded development of scalable AI-powered search and assistant features, enabling dynamic query-based filtering and real-time results through a serverless architecture using AWS Lambda, Amplify, S3, and Bedrock",
+                "❀ Reduced feature revision time by collaborating directly with clients to define and design features, while producing technical documentation and system diagrams to guide full stack implementation and product design"
+            ]],
+            ["Undergraduate Research Assistant", "UC San Francisco", "San Francisco, CA", "June 2025 - Sept 2025", [
+                "❀ Developed a speech feature extraction pipeline for 100+ voice recordings, extracting formant, spectral, source, and prosodic features using Python (Praat/Parselmouth, Librosa, NumPy, SciPy, and Pandas) to support ML models for depression detection",
+                "❀ Reduced manual audio preprocessing time by 40% by creating reusable preprocessing functions, and presented technical findings to interdisciplinary researchers to communicate system design and analytical decisions"
+            ]],
+            ["Technology Director", "Cognitive Science Students Association (CSSA) at UC Berkeley", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma", "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
+            ["COMPSCI 70 Senior Mentor", "Computer Science Mentors", "Berkeley, CA", "Sept 2024 - Present", ["❀ Leading biweekly small group sessions for CS70 (Discrete Math and Probability Theory)", "❀ Clarifying complex topics and providing guidance on problem-solving and exercises to improve student understanding", "❀ Improving past worksheets and creating new problems with the content team using LaTeX", "❀ Designed merch for the Media Committee"]],
+            ["Undergraduate Research Assistant", "Helen Wills Neuroscience Institute", "Berkeley, CA", "Jan 2025 - May 2025", ["❀ Developing a computer vision pipeline using OpenCV to extract and convert 100+ experimental datasheets into structured CSV files, automating manual processes, and enabling scalable Pandas-based data analysis",
             "❀ Improving the existing codebase by enhancing table structure detection and adding bounding box generation for reliable text extraction"]],
-            ["Internal Member (Tech Team)", "Cognitive Science Students Association (CSSA) at UC Berkeley", "Berkeley, CA", "Sept 2024 - Present", ["❀ Collaborating with team members to design interactive resource map for Cognitive Science students using Figma",
-            "❀ Developing interactive resource map and improving club website using HTML, CSS, and React"]],
-            ["CS 70 Junior Mentor (JM)", "Computer Science Mentors", "Berkeley, CA", "Sept 2024 - Present", ["❀ Leading biweekly small group sessions for CS70 (Discrete Math and Probability Theory)", "❀ Clarifying complex topics and providing guidance on problem-solving and exercises to improve student understanding", "❀ Improving past worksheets and creating new problems with the content team using LaTeX", "❀ Designed merch for the Media Committee"]],
-            ["UI Designer and Web Developer", "ASUC Office of the CTO", "Berkeley, CA", "Sept 2024 - Present", ["❀ Designed websites using Figma to create user-friendly, visually appealing interfaces",
-            "❀ Collaborating with groups on design direction and coded websites (HTML, CSS, Javascript)"]],
-            ["Design Lead", "Medical Technology at Berkeley", "Berkeley, CA", "July 2023 - Present", ["❀ Leading the development and design of continuous scientific journal issues, highlighting physician interactions, comprehensive medical literature reviews, and tech-related blog posts",
+            ["UI Designer and Web Developer", "ASUC Office of the CTO", "Berkeley, CA", "Sept 2024 - May 2025", ["❀ Developed responsive, mobile-first web interfaces using HTML, CSS, JavaScript, and TypeScript, collaborating with design, policy, and engineering teams to ensure features met accessibility and usability goals",
+            "❀ Designed and prototyped 3+ high-traffic student service websites in Figma, improving navigation clarity, accessibility, and usability for students while standardizing design patterns for faster future development"]],
+            ["Design Lead", "Medical Technology at Berkeley", "Berkeley, CA", "July 2023 - May 2025", ["❀ Leading the development and design of continuous scientific journal issues, highlighting physician interactions, comprehensive medical literature reviews, and tech-related blog posts",
             "❀ Finalizing style and writing guidelines to ensure the quality and consistency of scientific journal publications", "❀ Completed Design and Branding guidelines, including designing a new logo"]],
-            ["Undergraduate Research Assistant", "University of California, Berkeley", "Berkeley, CA", "Sept 2023 - June 2024", ["❀ Assisted professor David I. Levine on researching effective methods for health education",
+            ["Undergraduate Research Assistant", "University of California, Berkeley", "Berkeley, CA", "Sept 2023 - June 2024", ["❀ Developed web-based game creator features using Python (Flask), JavaScript, HTML, and SQL (SQLite), improving accessibility and usability by 35% through interactive forms, dynamic content, and responsive interfaces for health educators",
+            "❀ Redesigned the game website using Figma, implementing accessible design principles, consistent layouts, navigation improvements, and interactive components to enhance engagement and make the website intuitive",
             "❀ Developed and optimized new features for a game creator website using Python (Flask), JavaScript, and SQL (SQLite for game database), including revising and enhancing existing code and maintaining version control with Github"]],
             ["Academic Intern","UC Berkeley Electrical Engineering & Computer Sciences (EECS)",  "Berkeley, CA","Sept 2023 - Dec 2023", ["❀ Assisted the teaching assistant in weekly lab sections for CS 61A (The Structure and Interpretation of Computer Programs) by guiding around 30 students through Python, SQL, and Scheme coding assignments", "❀ Tutored students on foundational topics such as recursion, object-oriented programming, and data abstraction"]]]
         ;
 
         const projects = [
-        {title: "Music Cognition + SpotifyAPI (in progress)", description: "a web app that provides mood-based music recommendation to help users process emotions", tags: ["HTML/CSS", "React", "Python",   "TensorFlow (LSTM)", "Sentiment Analysis", "API"], points: ["Inspired by studies on cognitive neuroscience and emotional responses to music", "Extracted audio features (e.g., bpm, loudness, time signature) from SpotifyAPI to analyze song moods and assessed API usability for mood prediction based on track metadata", "Used DistilBERT to analyze song lyrics for emotional insights","Combined sentiment analysis with Spotify audio features for improved mood prediction, achieving 75% accuracy", "Using SpotifyAPI to suggest personalized playlists that feature user's top tracks and gradually transition from negative/sad to happier music", "Current Goals: incorporate a complex neural network model for improved mood prediction accuracy and use librosa to manually extract audio features and time series data"]},
+        
 
-        {title: "Flappy Search: AI for Finding Datasets", description: "a full-stack web app that helps students, researchers, and data enthusiasts find relevant datasets quickly", tags: ["NLP", "React", "Figma", "Python", "API"], points: ["Built a responsive user interface using React", "Designed and implemented the backend with Flask, integrating SpaCy and Tf-Idf Vectorizer for keyword extraction", "Queried datasets from KaggleAPI and HuggingFace API, performing relevance matching with cosine similarity using scikit-learn", "Implemented secure user authentication using Firebase","Designed and prototyped the user interface using Figma"]},
+        {title: "Flappy Search: AI for Finding Datasets", description: "a full-stack web app that helps students, researchers, and data enthusiasts find relevant datasets quickly", tags: ["NLP", "React", "Figma", "Python", "API"], points: ["Built and designed a full-stack web app (React + Flask) that recommends datasets based on keywords using spaCy, helping users find relevant datasets 3× faster", "Utilized Kaggle API and Hugging Face API for dataset retrieval, applied scikit-learn (Tfidf Vectorizer and Cosine Similarity) to improve dataset matching accuracy by 40%"]},
 
         {title: "Mind-Reading LED", description: "Personal Project/Hands-On PCB Engineering (DeCal)", tags: ["Python", "Circuit Design"], points: ["Redesigned PCB schematics and built a PCB board for both EEG and ECG scans, integrating a microcontroller and digital display for enhanced functionality", "Explored multimodal emotion recognition by analyzing heart rate and brain scans"]},  
         
@@ -214,7 +223,7 @@
                 <h1>welcome to ishtinarah's website!</h1>
             </div>
                 <div class="callout-quote">
-                    <h2>💐<em>    you are too concerned with what was and what will be. there is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. that is why it is called the present.</em></h2>
+                    <h2>💐<em>  you must never give into dispair. allow yourself to slip down that road, and you surrender to your lowest instincts. in the darkest times, hope is something you give yourself. that is the meaning of inner strength. (Avatar the Last Airbender)</em></h2>
                 </div>
             <div class="about-section">
                     <div class="about-section-image">
@@ -222,7 +231,7 @@
                     </div>
                     <div class="about-section-bio">
                         <h2>❀ About me!</h2>
-                        <p class="about-section-text">Hello! I'm a junior studying computer science and cognitive science, with a minor in linguistics. I'm passionate about exploring the intersection of psychology, technology, and creativity. I have experience in front end development, research, and design. Scroll down to <em>learn more!</em></p>
+                        <p class="about-section-text">Hello! I'm a first-generation senior studying CS + CogSci with a minor in Linguistics at UC Berkeley. Essentially, I'm a creative coder at heart, passionate about exploring the intersection of human cognition, design, and technology. I'm deeply committed to developing accessible design that advances cognitive science, supports mental health, and promotes educational equity. My technical focuses are Human-Computer Interaction and Human-Centered AI + software. Scroll down to <em>learn more!</em></p>
                     </div>
                     <div class="about-section-links">
                         <div class="links-header">
@@ -232,7 +241,7 @@
                                 <a href="mailto:ishtinarah@berkeley.edu">✉ Email</a>
                                 <a href="https://www.linkedin.com/in/ishtinarahquazi/">LinkedIn</a>
                                 <a href="https://github.com/ishtinarahq"> Github</a>
-                                <a href="https://devpost.com/software/fdsafasdf">Flappy Search (Recent Project)</a>
+                                <!-- <a href="https://devpost.com/software/fdsafasdf">Flappy Search (Recent Project)</a> -->
                         </div>
                     </div>
             </div>
@@ -265,7 +274,7 @@
                         <div class="education-list">
                             <div class="education-cal">
                                 <strong>University of California, Berkeley</strong>
-                                <p>BA in Computer Science; BA in Cognitive Science | Minor in Linguistics</p>
+                                <p>BA in Computer Science; BA in Cognitive Science | Minor in Linguistics & Certificate in Design Innovation</p>
                                 <p style="color:grey">2022-2026</p>
                                 <div class="cal-toggle">
                                     <div class="cal-toggle-triangle"></div>
@@ -278,10 +287,16 @@
                                     <li>CS 70: Discrete Math and Algorithms</li>
                                     <li>CS 170: Efficient Algorithms</li>
                                     <li>CS 188: Intro to AI</li>
+                                    <li>CS 189: Intro to ML</li>
+                                    <li>EECS 126: Probability and Random Processes</li>
+                                    <li>COGSCI 1B: Intro to Cognitive Science</li>
                                     <li>COGSCI 115: Neuropsychology of Happiness</li>
-                                    <li>COGSCI 1B: Introduction to Cognitive Science</li>
+                                    <li>PSYCH 127: Cognitive Neuroscience</li>
+                                    <li>LING 100: Intro to Linguistic Science</li>
                                     <li>MATH 54: Linear Algebra & Differential Equations</li>
                                     <li>DATA 100: Principles and Techniques of Data Science</li>
+                                    <li>DATA 104: Human Contexts and Ethics of Data</li>
+
                                     
                                 </div>
                                 
